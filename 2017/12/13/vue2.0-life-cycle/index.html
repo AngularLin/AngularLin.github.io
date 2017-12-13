@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="AngularJs,widget," />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="完成功能这是一种支持多种元素的表单，包括下拉框，编辑器，日期选择器，颜色选择器等。Angular Schema Form是分schema，form,data三块Json去定义表单。在controller里面，schema定义了数据结构，form定义了UI，model绑定了用户的输入。在html中使用统一的写法，使用ng-schema，ng-form与ng-model指令分别绑定，最后可呈现出不同的">
-<meta name="keywords" content="AngularJs,widget">
+<meta name="description" content="官网在介绍生命周期的时候，给出了图示，并且说你不需要立马弄明白所有的东西，不过随着你的不断学习和使用，它的参考价值会越来越高。第一次看图的时候，简单浏览。后面找到一些实际项目来看发现钩子函数的定义十分常见，而自己对于钩子函数是哪个阶段起作用认识很模糊，便回头重新理解生命周期图，遂有此文。">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular Schema Form使用方法">
-<meta property="og:url" content="http://angularlin.github.io/2017/11/15/angular-schema-form-example/index.html">
+<meta property="og:title" content="vue2.0 探索之生命周期与钩子函数">
+<meta property="og:url" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/index.html">
 <meta property="og:site_name" content="Lindang&#39;s Blog">
-<meta property="og:description" content="完成功能这是一种支持多种元素的表单，包括下拉框，编辑器，日期选择器，颜色选择器等。Angular Schema Form是分schema，form,data三块Json去定义表单。在controller里面，schema定义了数据结构，form定义了UI，model绑定了用户的输入。在html中使用统一的写法，使用ng-schema，ng-form与ng-model指令分别绑定，最后可呈现出不同的">
+<meta property="og:description" content="官网在介绍生命周期的时候，给出了图示，并且说你不需要立马弄明白所有的东西，不过随着你的不断学习和使用，它的参考价值会越来越高。第一次看图的时候，简单浏览。后面找到一些实际项目来看发现钩子函数的定义十分常见，而自己对于钩子函数是哪个阶段起作用认识很模糊，便回头重新理解生命周期图，遂有此文。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-16T08:33:36.484Z">
+<meta property="og:image" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/images/vue2.0-life-cycle/life-cycle.png">
+<meta property="og:image" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/images/vue2.0-life-cycle/hook.png">
+<meta property="og:image" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/images/vue2.0-life-cycle/update.png">
+<meta property="og:image" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/images/vue2.0-life-cycle/destroyed.png">
+<meta property="og:updated_time" content="2017-12-13T08:54:05.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular Schema Form使用方法">
-<meta name="twitter:description" content="完成功能这是一种支持多种元素的表单，包括下拉框，编辑器，日期选择器，颜色选择器等。Angular Schema Form是分schema，form,data三块Json去定义表单。在controller里面，schema定义了数据结构，form定义了UI，model绑定了用户的输入。在html中使用统一的写法，使用ng-schema，ng-form与ng-model指令分别绑定，最后可呈现出不同的">
+<meta name="twitter:title" content="vue2.0 探索之生命周期与钩子函数">
+<meta name="twitter:description" content="官网在介绍生命周期的时候，给出了图示，并且说你不需要立马弄明白所有的东西，不过随着你的不断学习和使用，它的参考价值会越来越高。第一次看图的时候，简单浏览。后面找到一些实际项目来看发现钩子函数的定义十分常见，而自己对于钩子函数是哪个阶段起作用认识很模糊，便回头重新理解生命周期图，遂有此文。">
+<meta name="twitter:image" content="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/images/vue2.0-life-cycle/life-cycle.png">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://angularlin.github.io/2017/11/15/angular-schema-form-example/"/>
+  <link rel="canonical" href="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/"/>
 
 
 
 
 
-  <title>Angular Schema Form使用方法 | Lindang's Blog</title>
+  <title>vue2.0 探索之生命周期与钩子函数 | Lindang's Blog</title>
   
 
 
@@ -297,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://angularlin.github.io/2017/11/15/angular-schema-form-example/">
+    <link itemprop="mainEntityOfPage" href="http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hu Lin">
@@ -314,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Angular Schema Form使用方法</h1>
+          <h1 class="post-title" itemprop="name headline">vue2.0 探索之生命周期与钩子函数</h1>
         
 
         <div class="post-meta">
@@ -326,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T14:49:33+08:00">
-                2017-11-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T16:52:33+08:00">
+                2017-12-13
               </time>
             
 
@@ -360,8 +365,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/AngularJs/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJs</span>
+                  <a href="/categories/技术/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -402,33 +407,108 @@
       
 
       
-        <h2 id="完成功能"><a href="#完成功能" class="headerlink" title="完成功能"></a>完成功能</h2><p>这是一种支持多种元素的表单，包括下拉框，编辑器，日期选择器，颜色选择器等。<br>Angular Schema Form是分schema，form,data三块Json去定义表单。在controller里面，schema定义了数据结构，form定义了UI，model绑定了用户的输入。在html中使用统一的写法，使用ng-schema，ng-form与ng-model指令分别绑定，最后可呈现出不同的表单。<br><a id="more"></a></p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ol>
-<li>先通过npm下载项目，使用指令<code>npm install angular-schema-form</code>，找到项目中的dist文件夹，拿到压缩文件<code>bootstrap-decorator.min.js</code>与<code>schema-form.min.js</code>。</li>
-<li>把压缩文件<code>bootstrap-decorator.min.js</code>与<code>schema-form.min.js</code>放入项目<code>alogic-itportal-web</code>的lib文件夹下。压缩文件放在lib文件夹下将在发布时保持原有格式，不会被压缩。</li>
-<li>参考angular-schema-form的用户手册，需要引入其他js文件，<a href="https://github.com/json-schema-form/angular-schema-form，" target="_blank" rel="external">https://github.com/json-schema-form/angular-schema-form，</a> 且需要按照一定的顺序加载，需要按照以下顺序：<br>angular.min.js， angular-sanitize.min.js， tv4.js ，ObjectPath.js，schema-form.min.js，bootstrap-decorator.min.js。 </li>
-<li>在使用到表单的入口，manage.js与app.js中分别载入schema-form模块，<code>var app = angular.module(&#39;app&#39;, [&#39;schemaForm&#39;,&#39;jscross&#39;, &#39;ui.router&#39;, &#39;slick&#39;, &#39;pasp.ui&#39;]);</code>。</li>
+        <p>官网在介绍生命周期的时候，给出了图示，并且说你不需要立马弄明白所有的东西，不过随着你的不断学习和使用，它的参考价值会越来越高。第一次看图的时候，简单浏览。后面找到一些实际项目来看发现钩子函数的定义十分常见，而自己对于钩子函数是哪个阶段起作用认识很模糊，便回头重新理解生命周期图，遂有此文。<br><a id="more"></a></p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p><img src="images/vue2.0-life-cycle/life-cycle.png" width="50%" height="50%"></p>
+<table>
+<thead>
+<tr>
+<th>Vue1.0+</th>
+<th>Vue2.0</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init</td>
+<td>beforeCreate</td>
+<td>组件实例刚被创建，组件属性计算之前，如data属性</td>
+</tr>
+<tr>
+<td>created</td>
+<td>created</td>
+<td>组件实例创建完成，属性已绑定，但DOM还未生成，$el属性还不存在</td>
+</tr>
+<tr>
+<td>beforeCompile</td>
+<td>beforeMount</td>
+<td>模板编译/挂载之前</td>
+</tr>
+<tr>
+<td>compiled</td>
+<td>mounted</td>
+<td>模板编译/挂载之后</td>
+</tr>
+<tr>
+<td>ready</td>
+<td>mounted</td>
+<td>模板编译/挂载之后</td>
+</tr>
+<tr>
+<td>–</td>
+<td>beforeUpdate</td>
+<td>组件更新之前。数据更新时调用，发生在虚拟DOM重新渲染和打补丁之前。</td>
+</tr>
+<tr>
+<td>–</td>
+<td>updated</td>
+<td>组件更新之后，由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。</td>
+</tr>
+<tr>
+<td>–</td>
+<td>activated</td>
+<td>keep-alive 组件被激活时调用</td>
+</tr>
+<tr>
+<td>–</td>
+<td>deactivated</td>
+<td>keep-alive 组件停用时调用</td>
+</tr>
+<tr>
+<td>attached</td>
+<td>–</td>
+<td>弃用了</td>
+</tr>
+<tr>
+<td>detached</td>
+<td>–</td>
+<td>弃用了</td>
+</tr>
+<tr>
+<td>beforeDestory</td>
+<td>beforeDestory</td>
+<td>实例销毁前调用，实例仍然完全可用</td>
+</tr>
+<tr>
+<td>destoryed</td>
+<td>destoryed</td>
+<td>实例销毁之后</td>
+</tr>
+</tbody>
+</table>
+<h2 id="辅助实例"><a href="#辅助实例" class="headerlink" title="辅助实例"></a>辅助实例</h2><p>下面我们结合实例对于生命周期的各个阶段进一步理解。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el: <span class="string">'#app'</span>,</span><br><span class="line">	data: &#123;</span><br><span class="line">		message: <span class="string">"A Vue example."</span></span><br><span class="line">	&#125;,</span><br><span class="line">	beforeCreate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'beforeCreate 创建前状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el); <span class="comment">//undefined</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data); <span class="comment">//undefined </span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message)</span><br><span class="line">	&#125;,</span><br><span class="line">	created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'created 创建完毕状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el); <span class="comment">//undefined</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data); <span class="comment">//已被初始化 </span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message); <span class="comment">//已被初始化</span></span><br><span class="line">	&#125;,</span><br><span class="line">	beforeMount: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'beforeMount 挂载前状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + (<span class="keyword">this</span>.$el)); <span class="comment">//已被初始化</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data); <span class="comment">//已被初始化  </span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message); <span class="comment">//已被初始化  </span></span><br><span class="line">	&#125;,</span><br><span class="line">	mounted: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'mounted 挂载结束状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el); <span class="comment">//已被初始化</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data); <span class="comment">//已被初始化</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message); <span class="comment">//已被初始化 </span></span><br><span class="line">	&#125;,</span><br><span class="line">	beforeUpdate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'beforeUpdate 更新前状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message);</span><br><span class="line">	&#125;,</span><br><span class="line">	updated: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'updated 更新完成状态===============》'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message);</span><br><span class="line">	&#125;,</span><br><span class="line">	beforeDestroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'beforeDestroy 销毁前状态===============》'</span>);</span><br><span class="line">		<span class="keyword">this</span>.message=<span class="string">"456"</span>;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message);</span><br><span class="line">	&#125;,</span><br><span class="line">	destroyed: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.group(<span class="string">'destroyed 销毁完成状态===============》'</span>);</span><br><span class="line">		<span class="keyword">this</span>.message=<span class="string">"123"</span>;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"el     : "</span> + <span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.$el);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"data   : "</span> + <span class="keyword">this</span>.$data);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"%c%s"</span>, <span class="string">"color:red"</span>, <span class="string">"message: "</span> + <span class="keyword">this</span>.message)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>将代码保存为hook.html，拖入浏览器运行，在控制台看到以下信息：</p>
+<p><img src="images/vue2.0-life-cycle/hook.png"></p>
+<h3 id="create和mounted"><a href="#create和mounted" class="headerlink" title="create和mounted"></a>create和mounted</h3><ol>
+<li><code>beforeCreate</code> el与data都未初始化；</li>
+<li><code>created</code> data初始化完成，el仍未初始化；</li>
+<li><code>beforeMount</code> el初始化，但el中的元素<code>&lt;p&gt;&lt;/p&gt;</code>，节点已产生，但message还没有渲染进去。</li>
+<li><code>mounted</code> el初始化完成，message完成渲染。</li>
 </ol>
-<h2 id="在itportal中的应用"><a href="#在itportal中的应用" class="headerlink" title="在itportal中的应用"></a>在itportal中的应用</h2><p>在itportal的manage入口，实现了用户/岗位/机构/团队的新建以及编辑更新的功能，这里大量使用了表单，下面用新建团队作为例子，分directive/controller/tpl三部分来说明schema-form的使用方法。</p>
-<h3 id="directive"><a href="#directive" class="headerlink" title="directive"></a>directive</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">jscross.widget(<span class="string">'newTeam'</span>, &#123;</span><br><span class="line">    templateUrl: relativePath.plugin + <span class="string">'manage/template/team/new.team.tpl.html'</span>,</span><br><span class="line">    replace: <span class="literal">false</span>,</span><br><span class="line">    restrict: <span class="string">'A'</span>,</span><br><span class="line">    controller: <span class="string">'newTeamCtrl'</span>,</span><br><span class="line">    scope: &#123;</span><br><span class="line">        current: <span class="string">'='</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>分别绑定了模板和控制器，没有太多需要解释。</p>
-<h3 id="controller中的form"><a href="#controller中的form" class="headerlink" title="controller中的form"></a>controller中的form</h3><p>controller中的form定义，form是定义了UI，这里是说在表单中会显示有三个元素id，name和note，像name这样没有附加其他属性的，就是最基本的输入框，placeholder是显示在输入框的提示语，在定义id的时候，要判断id是否已占用，这里需要到服务器进行异步验证。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">$scope.form = [&#123;</span><br><span class="line">	<span class="string">'key'</span>: <span class="string">'id'</span>,</span><br><span class="line">	<span class="string">'placeholder'</span>: <span class="string">'字母数字特殊字符下划线的组合，长度大于3小于16'</span>,</span><br><span class="line">	<span class="string">'$asyncValidators'</span>: &#123;</span><br><span class="line">		IdAlreadyTaken: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">var</span> deferred = $q.defer(); <span class="comment">//通过$q服务注册一个延迟对象deffered</span></span><br><span class="line">			<span class="keyword">if</span>(value != <span class="literal">undefined</span>) &#123;</span><br><span class="line">					<span class="keyword">var</span> IdOkcallback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">						deferred.resolve();</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">var</span> IdExistCallback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">						deferred.reject();</span><br><span class="line">					&#125;</span><br><span class="line">					team.IdCheck(&#123;</span><br><span class="line">						id: value</span><br><span class="line">					&#125;, IdOkcallback, IdExistCallback);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> deferred.promise; <span class="comment">//promise返回当前任务的完成结果</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="string">'validationMessage'</span>:&#123;</span><br><span class="line">		<span class="string">'IdAlreadyTaken'</span>: <span class="string">'ID已经被注册！'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">'name'</span>, &#123;</span><br><span class="line">	<span class="string">'key'</span>: <span class="string">'note'</span>,</span><br><span class="line">	<span class="string">'type'</span>: <span class="string">'textarea'</span>,</span><br><span class="line">	<span class="string">'placeholder'</span>: <span class="string">'简单介绍你的团队吧'</span></span><br><span class="line">&#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
-<h4 id="异步校验"><a href="#异步校验" class="headerlink" title="异步校验"></a>异步校验</h4><p>$q是Angular的一种内置服务，它可以使你异步地执行函数，并可以获取到函数的返回值。</p>
-<ol>
-<li><code>deferred.resolve(value)</code>  成功解决(resolve)了其派生的promise。参数value将来会被用作<code>promise.then(successCallback(value){...}</code>, <code>errorCallback(reason){...}</code>,<code>notifyCallback(notify){...})</code>中successCallback函数的参数。</li>
-<li><code>deferred.reject(reason)</code>  未成功解决其派生的promise。参数reason被用来说明未成功的原因。此时deferred实例的promise对象将会捕获一个任务未成功执行的错误，<code>promise.catch(errorCallback(reason){...})</code>。补充一点，<code>promise.catch(errorCallback)</code>实际上就是<code>promise.then(null, errorCallback)</code>的简写。<h4 id="异步校验注意事项"><a href="#异步校验注意事项" class="headerlink" title="异步校验注意事项"></a>异步校验注意事项</h4></li>
+<h3 id="update"><a href="#update" class="headerlink" title="update"></a>update</h3><p><img src="images/vue2.0-life-cycle/update.png"></p>
+<p>在控制台更新<code>app.message</code>触发<code>beforeUpdate</code>与<code>updated</code>钩子函数，<code>beforeUpdate</code>时，<code>el</code>中的message就已经替换成了更改之后的。</p>
+<h3 id="destory"><a href="#destory" class="headerlink" title="destory"></a>destory</h3><p><img src="images/vue2.0-life-cycle/destroyed.png"></p>
+<p>分别在<code>beforeDestroyed</code>与<code>destroyed</code>钩子函数中更改message的内容，打印出来的结果显示message可以更改，但没有触发update的动作，DOM没有重新渲染。在<code>Vue</code>实例被销毁后，实例不存在了，对message的更改是无效的。</p>
+<h2 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h2><ol>
+<li><code>beforeCreate</code>： 这时data\watcher\methods都是没有的。只有<code>$route</code>对象是存在的，可以根据路由进行重定向之类的操作。</li>
+<li><code>created</code>：在这步，实例已完成了数据观测，属性和方法的运算，watch/event事件毁掉。<code>$el</code>属性目前不可见。可向后台接口发送数据请求，根据返回改变data。</li>
+<li><code>beforeMount</code>： <code>render</code>函数首次被调用，页面渲染时所需的数据，要尽量在这阶段之前完成赋值。</li>
+<li><code>mounted</code>：创建<code>vm.$el</code>并替换el，挂载到实力上。依赖于DOM的代码放在这里，比如监听DOM事件。</li>
+<li><code>beforeUpdate</code>：虚拟DOM重新渲染和打补丁之前被调用。可在这里进一步修改$vm.data。</li>
+<li><code>updated</code>：可以继续执行依赖DOM的操作。</li>
+<li><code>beforeDestroy</code>：在这里实例仍然可用，没想好有什么特别的可以放在这里操作。</li>
+<li><code>destroyed</code>: 实例删除之后，给提示。</li>
 </ol>
-<p>需要注意的是<code>$asynValidators</code>中校验函数的名称与<code>validationMessage</code>中错误码中的名称一致，这里都是<code>IdAlreadyTaken</code>。在页面输入完id之后会将value传入<code>IdAlreadyTaken</code>方法，调用后台的<code>IdCheck</code>服务，如果没有占用则在界面上显示对号，如果已占用则在页面显示叉号并提示“ID已经被注册”。</p>
-<h3 id="controller中的schema与data"><a href="#controller中的schema与data" class="headerlink" title="controller中的schema与data"></a>controller中的schema与data</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$scope.dataModel = &#123;&#125;;</span><br><span class="line">$scope.schema = &#123;</span><br><span class="line">    &apos;type&apos;: &apos;object&apos;,</span><br><span class="line">    &apos;title&apos;: &apos;new-team&apos;,</span><br><span class="line">    &apos;properties&apos;: &#123;</span><br><span class="line">        &apos;id&apos;: &#123;</span><br><span class="line">            &apos;title&apos;: &apos;ID&apos;,</span><br><span class="line">            &apos;type&apos;: &apos;string&apos;,</span><br><span class="line">            &apos;pattern&apos;: &apos;^[a-zA-Z0-9._-]&#123;3,&#125;$&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        &apos;name&apos;: &#123;</span><br><span class="line">            &apos;title&apos;: &apos;名称&apos;,</span><br><span class="line">            &apos;type&apos;: &apos;string&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        &apos;note&apos;: &#123;</span><br><span class="line">            &apos;title&apos;: &apos;简介&apos;,</span><br><span class="line">            &apos;type&apos;: &apos;string&apos;,</span><br><span class="line">            &apos;maxLength&apos;: &apos;70&apos;,</span><br><span class="line">            &apos;validationMessage&apos;: &apos;太长啦，装不下啦&apos;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;required&apos;: [</span><br><span class="line">        &apos;id&apos;,</span><br><span class="line">        &apos;name&apos;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>schema定义了数据结构，其中properties定义了元素，这里的元素与form中的元素（或form中元素的key）是对应的，包括id,name与note，事实上在最后生成的dataModel中包含的也是这三个属性。title是显示在界面上的输入框前的label，pattern是用正则表达式检验输入内容，可以规定输入域的长度，以及定义提示信息。required表示必须要填的元素，没有填就提交时会报错。在schema-form中，有些元素是有多种实现形式的，比如下拉框有三种实现形式，通过schema和form共同来实现。由于是新建team，dataModel在这里初始化为空，如果是更新团队等表单，则dataModel要用已有的团队信息进行初始化。</p>
-<h3 id="controller中表单的提交"><a href="#controller中表单的提交" class="headerlink" title="controller中表单的提交"></a>controller中表单的提交</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$scope.OK = <span class="function"><span class="keyword">function</span>(<span class="params">form</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// First we broadcast an event so all fields validate themselves</span></span><br><span class="line">    $scope.$broadcast(<span class="string">'schemaFormValidate'</span>);</span><br><span class="line">    <span class="comment">// Then we check if the form is valid</span></span><br><span class="line">    <span class="keyword">if</span>(form.$valid) &#123;</span><br><span class="line">        newTeam();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>通过broadcast一个事件（schemaFormValidate）来强制执行校验，校验成功form.$valid为true时，执行新建团队的方法。</p>
-<h3 id="表单的模板"><a href="#表单的模板" class="headerlink" title="表单的模板"></a>表单的模板</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel panel-default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel-body"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-8"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"newTeamForm"</span> <span class="attr">sf-model</span>=<span class="string">"dataModel"</span> <span class="attr">sf-schema</span>=<span class="string">"schema"</span> <span class="attr">sf-form</span>=<span class="string">"form"</span> <span class="attr">sf-options</span>=<span class="string">"&#123; formDefaults: &#123; ngModelOptions: &#123; updateOn: 'blur' &#125; &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-8"</span> <span class="attr">style</span>=<span class="string">"text-align:center;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-default btn-success margin-right-20"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">ng-click</span>=<span class="string">"OK(newTeamForm)"</span>&gt;</span>完成<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">ng-click</span>=<span class="string">"cancel()"</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这里双向绑定dataModel/schema/form，SchemaForm通过sf-options来设定全局属性，<code>sf-options=&quot;{ formDefaults: { ngModelOptions: { updateOn: &#39;blur&#39; } }}&quot;</code>此设置会使表单的每项都带上一个属性：ng-model-options=”form.ngModelOptions”，关于ng-model-options：常用于将“model与用户输入实时同步”改为“model在用户输入完（blur之后）再同步”。</p>
-<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><h4 id="官网："><a href="#官网：" class="headerlink" title="官网："></a>官网：</h4><p><a href="http://schemaform.io/" target="_blank" rel="external">http://schemaform.io/</a></p>
-<h4 id="git地址："><a href="#git地址：" class="headerlink" title="git地址："></a>git地址：</h4><p><a href="https://github.com/json-schema-form/angular-schema-form" target="_blank" rel="external">https://github.com/json-schema-form/angular-schema-form</a></p>
-<h4 id="demo地址："><a href="#demo地址：" class="headerlink" title="demo地址："></a>demo地址：</h4><p><a href="http://schemaform.io/examples/bootstrap-example.html" target="_blank" rel="external">http://schemaform.io/examples/bootstrap-example.html</a></p>
-<h4 id="资料参考地址："><a href="#资料参考地址：" class="headerlink" title="资料参考地址："></a>资料参考地址：</h4><p><a href="http://www.cnblogs.com/natsu12/p/5417092.html" target="_blank" rel="external">http://www.cnblogs.com/natsu12/p/5417092.html</a></p>
 
       
     </div>
@@ -470,9 +550,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJs/" rel="tag"># AngularJs</a>
-          
-            <a href="/tags/widget/" rel="tag"># widget</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
         </div>
       
@@ -485,8 +563,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/14/canvas-example/" rel="next" title="canvas动画实例初探">
-                <i class="fa fa-chevron-left"></i> canvas动画实例初探
+              <a href="/2017/11/15/angular-schema-form-example/" rel="next" title="Angular Schema Form使用方法">
+                <i class="fa fa-chevron-left"></i> Angular Schema Form使用方法
               </a>
             
           </div>
@@ -494,10 +572,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/13/vue2.0-life-cycle/" rel="prev" title="vue2.0 探索之生命周期与钩子函数">
-                vue2.0 探索之生命周期与钩子函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -649,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#完成功能"><span class="nav-number">1.</span> <span class="nav-text">完成功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">2.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在itportal中的应用"><span class="nav-number">3.</span> <span class="nav-text">在itportal中的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#directive"><span class="nav-number">3.1.</span> <span class="nav-text">directive</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#controller中的form"><span class="nav-number">3.2.</span> <span class="nav-text">controller中的form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#异步校验"><span class="nav-number">3.2.1.</span> <span class="nav-text">异步校验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步校验注意事项"><span class="nav-number">3.2.2.</span> <span class="nav-text">异步校验注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#controller中的schema与data"><span class="nav-number">3.3.</span> <span class="nav-text">controller中的schema与data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#controller中表单的提交"><span class="nav-number">3.4.</span> <span class="nav-text">controller中表单的提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单的模板"><span class="nav-number">3.5.</span> <span class="nav-text">表单的模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考网站"><span class="nav-number">4.</span> <span class="nav-text">参考网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#官网："><span class="nav-number">4.0.1.</span> <span class="nav-text">官网：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git地址："><span class="nav-number">4.0.2.</span> <span class="nav-text">git地址：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#demo地址："><span class="nav-number">4.0.3.</span> <span class="nav-text">demo地址：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资料参考地址："><span class="nav-number">4.0.4.</span> <span class="nav-text">资料参考地址：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">1.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#辅助实例"><span class="nav-number">2.</span> <span class="nav-text">辅助实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#create和mounted"><span class="nav-number">2.1.</span> <span class="nav-text">create和mounted</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-number">2.2.</span> <span class="nav-text">update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#destory"><span class="nav-number">2.3.</span> <span class="nav-text">destory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用总结"><span class="nav-number">3.</span> <span class="nav-text">使用总结</span></a></li></ol></div>
             
 
           </div>
