@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://angularlin.github.io/2017/12/13/vue2.0-life-cycle/</loc>
+    <lastmod>2017-12-13T09:20:31.306Z</lastmod>
+    <data>
+        <display>
+        <title>vue2.0 探索之生命周期与钩子函数</title>
+        <pubTime>2017-12-13T08:52:33.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://angularlin.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="Vue" url="http://angularlin.github.io/categories/%E6%8A%80%E6%9C%AF/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://angularlin.github.io/2017/11/15/angular-schema-form-example/</loc>
+    <lastmod>2017-11-16T08:33:36.484Z</lastmod>
+    <data>
+        <display>
+        <title>Angular Schema Form使用方法</title>
+        <pubTime>2017-11-15T06:49:33.000Z</pubTime>
+        
+        <tag>AngularJs</tag>
+         
+        <tag>widget</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://angularlin.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="AngularJs" url="http://angularlin.github.io/categories/%E6%8A%80%E6%9C%AF/AngularJs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://angularlin.github.io/2017/11/14/canvas-example/</loc>
+    <lastmod>2017-11-16T08:32:28.586Z</lastmod>
+    <data>
+        <display>
+        <title>canvas动画实例初探</title>
+        <pubTime>2017-11-14T06:19:33.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://angularlin.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
